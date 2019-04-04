@@ -48,6 +48,7 @@ fn main() {
 		.filter(|href| href.is_some())
 		.map(|href_op| href_op.unwrap())
 		.filter(|href_str| {
+			// this is quite ugly
 			href_str.starts_with("/wiki/")
 				&& !href_str.contains("Wikipedia")
 				&& !href_str.contains("Category")
@@ -55,6 +56,7 @@ fn main() {
 				&& !href_str.contains("Special")
 				&& !href_str.contains("File:")
 				&& !href_str.contains("Talk:")
+				&& !href_str.contains("Help:")
 		});
 
 	for link in valid_links {
