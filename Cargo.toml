@@ -1,0 +1,10 @@
+[package]
+name = "wiki-crawler"
+version = "0.1.0"
+authors = ["Ryan Faulhaber <faulhaberryan@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+reqwest = "0.9.13"
+scraper = "0.9.2"
+clap = "2.32.0"
